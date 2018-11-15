@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/widgets/drawer_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,6 +26,9 @@ class MyHomePage extends StatelessWidget {
         actions: <Widget>[
           Icon(Icons.list),
         ],
+      ),
+      drawer: new Drawer(
+        child: DrawerWidget(),
       ),
       body: Center(child: Text("My Simple Home Body")),
     );
