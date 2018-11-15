@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './drawer_page.dart';
+import 'drawer_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
 //        ],
       ),
       drawer: new Drawer(
-        child: DrawerWidget(),
+        child: DrawerPageWidget(),
       ),
       body: Center(child: Text("My Simple Home Body")),
     );

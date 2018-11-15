@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import './page_index.dart';
+import 'page_index.dart';
 
-class DrawerWidget extends StatefulWidget {
+class DrawerPageWidget extends StatefulWidget {
   @override
-  _DrawerWidgetState createState() => _DrawerWidgetState();
+  _DrawerPageWidgetState createState() => _DrawerPageWidgetState();
 }
 
-class _DrawerWidgetState extends State<DrawerWidget> {
+class _DrawerPageWidgetState extends State<DrawerPageWidget> {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -27,7 +27,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           trailing: Icon(Icons.arrow_right),
           onTap: () {
             Navigator.pop(context);
-            Navigator.pushNamed(context, DataPersistWidget.routeUrl);
+            Navigator.pushNamed(context, DataPersistPageWidget.routeUrl);
           },
         ),
         new Divider(),

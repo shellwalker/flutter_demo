@@ -16,6 +16,7 @@ doc/api/
 .idea
 
 # Flutter Generated
+.flutter-plugins
 # ios section
 ios/Flutter/App.framework/
 ios/Flutter/Flutter.framework/
@@ -23,6 +24,12 @@ ios/Flutter/Generated.xcconfig
 ios/Flutter/flutter_assets/
 ios/Runner.xcworkspace/xcshareddata/
 ios/ServiceDefinitions.json
+# ios CocoaPods
+ios/Podfile
+ios/Podfile.lock
+ios/Pods/
+# other ios
+ios/.symlinks/
 # android section
 android/.gradle
 android/local.properties
