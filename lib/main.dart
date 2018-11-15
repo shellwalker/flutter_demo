@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_demo/widgets/drawer_page.dart';
+import 'package:flutter_demo/routes.dart';
+import 'package:flutter_demo/widgets/home_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,25 +13,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: new AppBar(
-        title: Text("My Home Title"),
-        actions: <Widget>[
-          Icon(Icons.list),
-        ],
-      ),
-      drawer: new Drawer(
-        child: DrawerWidget(),
-      ),
-      body: Center(child: Text("My Simple Home Body")),
+      home: HomePage(),
+      routes: Routes.routes,
     );
   }
 }

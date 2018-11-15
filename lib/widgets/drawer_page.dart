@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './page_index.dart';
+
 class DrawerWidget extends StatefulWidget {
   @override
   _DrawerWidgetState createState() => _DrawerWidgetState();
@@ -21,11 +23,11 @@ class _DrawerWidgetState extends State<DrawerWidget> {
           accountEmail: Text("sagittarius1212@gmail.com"),
         ),
         ListTile(
-          title: Text("XXX 学习"),
+          title: Text("Data Persist"),
           trailing: Icon(Icons.arrow_right),
           onTap: () {
-            print("Tap xxx.");
             Navigator.pop(context);
+            Navigator.pushNamed(context, DataPersistWidget.routeUrl);
           },
         ),
         new Divider(),
