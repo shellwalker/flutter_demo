@@ -32,11 +32,11 @@ class _DrawerPageWidgetState extends State<DrawerPageWidget> {
         ),
         new Divider(),
         ListTile(
-          title: Text("YYY 学习"),
+          title: Text("Wx Clone"),
           trailing: Icon(Icons.arrow_right),
           onTap: () {
-            print("Tap YYY");
             Navigator.pop(context);
+            Navigator.pushNamed(context, WxSkeletonClonePageWidget.routeUrl);
           },
         ),
       ],
