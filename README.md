@@ -3,6 +3,10 @@
 Practice the flutter.
 ## Getting Started
 
+#### Refs
+- [awesome-flutter](https://github.com/Solido/awesome-flutter)
+
+#### Running
 Install the dependencies：
 > `flutter packages get`  
 
