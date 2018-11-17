@@ -8,9 +8,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: new AppBar(
         title: Text("My Home Title"),
-//        actions: <Widget>[
-//          Icon(Icons.list),
-//        ],
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.list),
+            onPressed: () {
+              print("icon list pressed.");
+            },
+          ),
+        ],
       ),
       drawer: new Drawer(
         child: DrawerPageWidget(),

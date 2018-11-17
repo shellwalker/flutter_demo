@@ -35,9 +35,11 @@ class _WxSkeletonClonePageWidgetState extends State<WxSkeletonClonePageWidget> {
       onTap: (int index) {
         setState(() {
           _currentIndex = index;
-          _pageController.animateToPage(_currentIndex,
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.fastOutSlowIn);
+          _pageController.jumpToPage(_currentIndex); // change directly
+          // animateToPage will change page from 'old' to 'new' in sequence. STEP is 1.
+//          _pageController.animateToPage(_currentIndex,
+//              duration: const Duration(milliseconds: 200),
+//              curve: Curves.fastOutSlowIn);
         });
       },
     );
@@ -50,14 +52,14 @@ class _WxSkeletonClonePageWidgetState extends State<WxSkeletonClonePageWidget> {
 //        leading: Container(),
         title: Text("WX Clone"),
         actions: <Widget>[
-          new Icon(
-            Icons.search,
-            size: 22,
+          new IconButton(
+            icon: Icon(Icons.search, semanticLabel: "Search",),
+            onPressed: ()=>print("Search Pressed."),
           ),
-          new Icon(
-            Icons.add,
-            size: 22,
-          )
+          new IconButton(
+            icon: Icon(Icons.add, semanticLabel: "More",),
+            onPressed: ()=>print("More Pressed."),
+          ),
         ],
       ),
       body: PageView.builder(
@@ -67,8 +69,10 @@ class _WxSkeletonClonePageWidgetState extends State<WxSkeletonClonePageWidget> {
         itemCount: _pages.length,
         controller: _pageController,
         onPageChanged: (int index) {
-          _currentIndex = index;
           print("切换到Page $index!");
+          setState(() {
+            _currentIndex = index;
+          });
         },
       ),
       bottomNavigationBar: _buildBottomNavigationBar(),
