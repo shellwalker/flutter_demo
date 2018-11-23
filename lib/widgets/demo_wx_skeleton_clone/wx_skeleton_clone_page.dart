@@ -53,12 +53,18 @@ class _WxSkeletonClonePageWidgetState extends State<WxSkeletonClonePageWidget> {
         title: Text("WX Clone"),
         actions: <Widget>[
           new IconButton(
-            icon: Icon(Icons.search, semanticLabel: "Search",),
-            onPressed: ()=>print("Search Pressed."),
+            icon: Icon(
+              Icons.search,
+              semanticLabel: "Search",
+            ),
+            onPressed: () => print("Search Pressed."),
           ),
           new IconButton(
-            icon: Icon(Icons.add, semanticLabel: "More",),
-            onPressed: ()=>print("More Pressed."),
+            icon: Icon(
+              Icons.add,
+              semanticLabel: "More",
+            ),
+            onPressed: () => print("More Pressed."),
           ),
         ],
       ),

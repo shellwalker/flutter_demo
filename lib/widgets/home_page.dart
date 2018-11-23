@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/widgets/drawer_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-import 'drawer_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
